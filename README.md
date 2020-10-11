@@ -1,4 +1,4 @@
-### random-shuffle
+### fisher-shuffle
 A set of utility functions to shuffle and generate random array sequences based on **Fisher–Yates Algorithm**. The package is written in typescript and does not depend on any other packages. The package is published as an npm module.
 
 #### 1. To install :
@@ -11,7 +11,7 @@ a. `shuffleArray` :
 Creates a new array which is the shuffled version of the old one, (note : this creates another array in memory)
 
 ```javascript
-const randomUtils = require('random-shuffle')
+const randomUtils = require('fisher-shuffle')
 
 //It can shuffle arrays of any type. (including custom object arrays)
 const originalArray = [1,2,3,4,5,6,7]
@@ -26,7 +26,7 @@ b. `shuffleArrayInPlace` :
 This function shuffles the array in-place without creating another array in O(n) time. This is the best method to use to shuffle large arrays, which are memory-costly.
 
 ```javascript
-const randomUtils = require('random-shuffle')
+const randomUtils = require('fisher-shuffle')
 
 //It can shuffle arrays of any type. (including custom object arrays)
 const originalArray = [1,2,3,4,5,6,7]
@@ -41,7 +41,7 @@ c. `generateSequence` :
 Generates a linear sequence from `min` to `max` by incrementing `step` every time, this is just like python's range, except the returns the array at once.
 
 ```javascript
-const randomUtils = require('random-shuffle')
+const randomUtils = require('fisher-shuffle')
 
 //It can generate integer and floating point sequences
 const result = randomUtils.generateSequence(min = 0, max = 100, step = 10)
@@ -54,7 +54,7 @@ d. `generateRandomSequence` :
 Generates a random sequence between the range `min` and `max`, with `step` difference. The result is a unique sequence, which means there are no repetitions.
 
 ```javascript
-const randomUtils = require('random-shuffle')
+const randomUtils = require('fisher-shuffle')
 
 //It can generate integer and floating point sequences
 const result = randomUtils.generateRandomSequence(min = 0, max = 100, step = 10)
@@ -64,7 +64,7 @@ console.log(result)
 ```
 
 #### 3. Development :
-As a developer, if you want to develop modules on top of `random-shuffle` or modify the codebase, you have to setup the development environment. The project is written using `typescript`, version `4.0.3`. You can simply run `npm install` to install `typescript`.
+As a developer, if you want to develop modules on top of `fisher-shuffle` or modify the codebase, you have to setup the development environment. The project is written using `typescript`, version `4.0.3`. You can simply run `npm install` to install `typescript`.
 
 ##### a. Compiling :
 To compile the module, run :
