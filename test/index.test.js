@@ -145,7 +145,23 @@ describe("#2 Sequence generation test", () => {
 
             const shuffledSequence = randomUtils.generateRandomSequence(min, max, step);
 
-            console.log(linearSequence)
+
+            var condition = true;
+            linearSequence.forEach((element) => {
+                condition = condition && shuffledSequence.includes(element, 0);
+            })
+
+            expect(condition).to.be.true;
+        }),
+        it("Every element in the array should be present in the shuffled sequence, for floating point numbers with non-zero min", () => {
+            const min = 2.0;
+            const max = 3.0;
+
+            const step = 0.001;
+
+            const linearSequence = randomUtils.generateSequence(min, max, step);
+
+            const shuffledSequence = randomUtils.generateRandomSequence(min, max, step);
 
             var condition = true;
             linearSequence.forEach((element) => {
