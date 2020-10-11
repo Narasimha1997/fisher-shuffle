@@ -1,6 +1,6 @@
 {
   "name": "fisher-shuffle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A JavaScript that shuffles arrays randomly and generates random sequences.",
   "main": "dist/index.js",
   "scripts": {
