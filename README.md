@@ -73,11 +73,20 @@ npm run build
 ```
 or you can use `tsc` if typescript is installed globally.
 
-##### b. Running unit-tests (still under implementation):
+##### b. Running unit-tests :
 We are using `mocha` and `chai` to write unit-tests. Run `npm install` and `npm run test` to run the unit-tests.
+
+Checkout `tests/index.test.js` to see unit-tests.
+
+To run the test suite, run :
+```
+npm run test
+```
 
 #### 4. Contributing
 Contributions are welcome. You can add new functionalities or write tests. We are using `mocha` and `chai` for unit-testing.
+
+We have added a github-action to build and execute unit-tests before merging any PR.
 
 #### Acknowledements 
 1. Fisher–Yates algorithm
