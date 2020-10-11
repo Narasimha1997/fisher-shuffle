@@ -8,7 +8,6 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateSequence = exports.generateRandomSequence = exports.shuffleArray = exports.shuffleArrayInPlace = void 0;
-var alphabets = "abcdefghijklmnopqrstuvwxyz";
 //random number generator
 var randomIntFromInterval = function (min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -36,31 +35,12 @@ var generateRandomSequence = function (min, max, step) {
     if (step == 0) {
         return [];
     }
-    var length = Math.ceil((max - min) / step);
-    var array = new Array(length);
-    var iNum;
-    var jNum;
-    for (var i = length - 1; i >= 0; i--) {
-        var j = randomIntFromInterval(0, i);
-        if (array[i]) {
-            iNum = array[i];
-        }
-        else {
-            iNum = min + (i * step);
-        }
-        if (array[j]) {
-            jNum = array[j];
-        }
-        else {
-            jNum = min + (j * step);
-        }
-        array[j] = iNum;
-        array[i] = jNum;
-    }
+    var array = generateSequence(min, max, step);
+    shuffleArrayInPlace(array);
     return array;
 };
 exports.generateRandomSequence = generateRandomSequence;
-//generate unique random string:
+//generate linear sequence between min to (max - 1):
 var generateSequence = function (min, max, step) {
     if (step === void 0) { step = 1; }
     if (step == 0) {

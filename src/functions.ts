@@ -1,8 +1,3 @@
-
-
-const alphabets = "abcdefghijklmnopqrstuvwxyz";
-
-
 //random number generator
 const randomIntFromInterval = (min : number, max : number) : number =>  { 
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -34,37 +29,12 @@ const generateRandomSequence = (min : number, max : number, step : number = 1) :
         return []
     }
 
-    const length : number = Math.ceil( (max - min) / step );
-    const array : Array<number> = new Array(length);
-    
-    var iNum : number;
-    var jNum : number;
-
-    for ( var i = length - 1; i >= 0; i --) {
-
-        const j : number = randomIntFromInterval(0, i);
-
-        if (array[i]) {
-            iNum = array[i];
-        } else {
-            iNum = min + (i * step);
-        }
-
-        if (array[j]) {
-            jNum = array[j];
-        } else {
-            jNum  =  min + (j * step) ;
-        }
-                
-        array[j] = iNum;
-        array[i] = jNum; 
-
-    }
-
+    const array : Array<number> = generateSequence(min, max, step);
+    shuffleArrayInPlace(array);
     return array; 
 }
 
-//generate unique random string:
+//generate linear sequence between min to (max - 1):
 const generateSequence = (min : number, max : number, step : number = 1) : Array<number> => {
 
     if (step == 0) { 
