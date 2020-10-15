@@ -14,7 +14,7 @@ Creates a new array which is the shuffled version of the old one, (note : this c
 const randomUtils = require('fisher-shuffle')
 
 //It can shuffle arrays of any type. (including custom object arrays)
-const originalArray = [1,2,3,4,5,6,7]
+const originalArray = [1,2,3,4,5,6,7, 8, 9, 10]
 const shuffledArray = randomUtils.shuffleArray(originalArray)
 
 console.log(shuffledArray)
@@ -29,7 +29,7 @@ This function shuffles the array in-place without creating another array in O(n)
 const randomUtils = require('fisher-shuffle')
 
 //It can shuffle arrays of any type. (including custom object arrays)
-const originalArray = [1,2,3,4,5,6,7]
+const originalArray = [1,2,3,4,5,6,7, 8, 9, 10]
 randomUtils.shuffleArrayInPlace(originalArray)
 
 console.log(originalArray)
