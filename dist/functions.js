@@ -7,7 +7,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateSequence = exports.generateRandomSequence = exports.shuffleArray = exports.shuffleArrayInPlace = void 0;
+exports.shuffleCustom = exports.generateSequence = exports.generateRandomSequence = exports.shuffleArray = exports.shuffleArrayInPlace = void 0;
 //random number generator
 var randomIntFromInterval = function (min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -54,3 +54,10 @@ var generateSequence = function (min, max, step) {
     return array;
 };
 exports.generateSequence = generateSequence;
+var shuffleCustom = function (swapFunction, length) {
+    for (var i = length - 1; i >= 1; i--) {
+        var j = randomIntFromInterval(0, i);
+        swapFunction(i, j);
+    }
+};
+exports.shuffleCustom = shuffleCustom;
