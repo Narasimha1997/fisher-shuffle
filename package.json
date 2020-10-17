@@ -1,6 +1,6 @@
 {
   "name": "fisher-shuffle",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A JavaScript that shuffles arrays randomly and generates random sequences.",
   "main": "dist/index.js",
   "scripts": {
@@ -19,9 +19,9 @@
   "author": "Narasimha Prasanna HN",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Narasimha1997/random-shuffle/issues"
+    "url": "https://github.com/Narasimha1997/fisher-shuffle/issues"
   },
-  "homepage": "https://github.com/Narasimha1997/random-shuffle#readme",
+  "homepage": "https://https://github.com/Narasimha1997/fisher-shuffle",
   "devDependencies": {
     "chai": "4.2.0",
     "mocha": "8.1.3",
