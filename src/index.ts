@@ -1,4 +1,4 @@
-import {shuffleArrayInPlace, shuffleArray, generateRandomSequence, generateSequence} from './functions'
+import {shuffleArrayInPlace, shuffleArray, generateRandomSequence, generateSequence, shuffleCustom} from './functions'
 
 
-export { shuffleArrayInPlace,  shuffleArray, generateRandomSequence, generateSequence}
+export { shuffleArrayInPlace,  shuffleArray, generateRandomSequence, generateSequence, shuffleCustom}

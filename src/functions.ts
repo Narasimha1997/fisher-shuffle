@@ -51,4 +51,11 @@ const generateSequence = (min : number, max : number, step : number = 1) : Array
     return array;
 }
 
-export {shuffleArrayInPlace, shuffleArray, generateRandomSequence, generateSequence}
+const shuffleCustom = (swapFunction : (i : number, j : number) => void, length : number) : void => {
+    for (var i = length - 1; i >= 1 ; i --) {
+        const j : number = randomIntFromInterval(0, i);
+        swapFunction(i, j);
+    }
+} 
+
+export {shuffleArrayInPlace, shuffleArray, generateRandomSequence, generateSequence, shuffleCustom}
